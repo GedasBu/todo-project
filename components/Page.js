@@ -1,21 +1,21 @@
 class Page {
     constructor() {
-        this.title = 'TODO';
-        this.baseURL = 'http://localhost:3000/';
-        this.route = '';
-        this.pageName = 'Home';
-        this.pageTemplateName = 'home';
+        this.title = "TODO";
+        this.baseURL = "http://localhost:3000/";
+        this.route = "";
+        this.pageName = "Home";
+        this.pageTemplateName = "home";
     }
 
     baseHref() {
-        return this.baseURL + this.route + (this.route === '' ? '' : '/');
+        return this.baseURL + this.route + (this.route === "" ? "" : "/");
     }
 
-    bodyHTML() {
+    async bodyHTML() {
         return `Page content`;
     }
 
-    render() {
+    async render() {
         return `<!DOCTYPE html>
                 <html lang="en">
 
@@ -39,7 +39,7 @@ class Page {
                 </head>
 
                 <body>
-                    ${this.bodyHTML()}
+                    ${await this.bodyHTML()}
                 </body>
 
                 </html>`;

@@ -1,12 +1,14 @@
 /* base */
-@import '../base/reset.css';
-@import '../base/variables.css';
-@import '../base/layout.css';
-@import '../base/base.css';
+@import "../base/reset.css";
+@import "../base/variables.css";
+@import "../base/layout.css";
+@import "../base/base.css";
 
 /* 3rd-party */
 
 /* components */
-@import '../components/button.css';
+@import "../components/button.css";
+@import "../components/table.css";
+@import "../components/form.css";
 
 /* CUSTOM PAGE STYLE */
