@@ -50,7 +50,7 @@ class PageHome extends Page {
             result += `
             <tr>
                 <td>${task.id}</td>
-                <td>${task.text}</td>
+                <td>${task.text.slice(0,10)}...</td>
                 <td>${task.status}</td>
                 <td>${dateString}</td>
                 <td>
@@ -79,7 +79,28 @@ class PageHome extends Page {
                 <th>Action</th>
             </tr>
             ${this.createTaskList(array)}
-      </table>
+        </table>
+     
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form>
+                    <label for="text">Text field</label>
+                    <textarea id="text" placeholder="Your text here"></textarea>
+                    <label for="status">Status:</label>
+                    <select id="status">
+                        <option value="1">New task</option>
+                        <option value="2">In progress</option>
+                        <option value="3">Done</option>
+                    </select>
+                    <button type="submit" class="btn">Confirm task</button>
+                </form>
+            </div>
+
+        </div>
+    
       <script src="js/home.js"></script>
         `;
     }
